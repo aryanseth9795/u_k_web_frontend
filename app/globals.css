@@ -1,26 +1,48 @@
 @import "tailwindcss";
 
+
+/* ===== Color Tokens (HSL for Tailwind var usage) ===== */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: 320 100% 99%;      /* #FFF7FB porcelain */
+  --foreground: 220 13% 13%;       /* deep charcoal */
+  --card: 0 0% 100%;
+  --card-foreground: 220 13% 13%;
+  --primary: 326 68% 86%;          /* #F3CFE2 blush rose */
+  --primary-foreground: 240 6% 10%;
+  --accent: 262 83% 58%;           /* #7C3AED plum */
+  --accent-foreground: 0 0% 100%;
+  --muted: 310 25% 95%;
+  --muted-foreground: 220 9% 40%;
+  --border: 310 25% 92%;
+  --ring: 262 83% 58%;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  --background: 240 10% 6%;
+  --foreground: 0 0% 98%;
+  --card: 240 10% 8%;
+  --card-foreground: 0 0% 98%;
+  --primary: 326 68% 30%;
+  --primary-foreground: 0 0% 98%;
+  --accent: 262 83% 60%;
+  --accent-foreground: 0 0% 100%;
+  --muted: 240 10% 12%;
+  --muted-foreground: 0 0% 80%;
+  --border: 240 10% 18%;
+  --ring: 262 83% 60%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* Base */
+html, body { height: 100%; }
+body { @apply bg-[hsl(var(--background))] text-[hsl(var(--foreground))] antialiased; }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+.font-serif { font-family: var(--font-playfair), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; }
+.font-sans { font-family: var(--font-inter), ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; }
+
+/* Focus visibility */
+:focus-visible { outline: 2px solid hsl(var(--ring)); outline-offset: 2px; }
+
+/* Pretty scrollbars */
+* { scrollbar-width: thin; scrollbar-color: hsl(var(--accent)) transparent; }
+::-webkit-scrollbar { height: 10px; width: 10px; }
+::-webkit-scrollbar-thumb { background: hsl(var(--accent)); border-radius: 999px; }
