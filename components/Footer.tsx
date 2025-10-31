@@ -4,17 +4,12 @@ export default function Footer() {
   return (
     <footer className="mt-16 border-t border-[hsl(var(--border))] py-10 text-sm">
       <div className="container mx-auto flex flex-col gap-4 px-4 md:flex-row md:items-center md:justify-between">
-        <div>
-          <div className="font-medium">UK Cosmetic</div>
+        <div className="max-w:[25%] space-y-1 text-[hsl(var(--muted-foreground))] md:max-w-[20%]">
+          <div className="font-medium">UK Cosmetics & Gift Center</div>
           <div className="text-[hsl(var(--muted-foreground))]">
             {BRAND.address}
           </div>
-          <div className="mt-1 text-[hsl(var(--muted-foreground))]">
-            Owner (Proprietor): <span className="font-medium">{BRAND.owner}</span>
-          </div>
-          <div className="mt-1 text-[hsl(var(--muted-foreground))]">
-            Developer: <span className="font-medium">{BRAND.developer}</span>
-          </div>
+       
         </div>
         <nav className="flex gap-6 text-[hsl(var(--muted-foreground))]">
           <a href="#categories" className="hover:underline">Categories</a>
@@ -24,7 +19,13 @@ export default function Footer() {
           <a href="#contact" className="hover:underline">Contact</a>
         </nav>
         <div className="opacity-70">
-          © {new Date().getFullYear()} UK Cosmetic. All rights reserved.
+          © {new Date().getFullYear()} UK Cosmetic & Gift Center. All rights reserved.
+             <div className="mt-1 text-[hsl(var(--muted-foreground))]">
+            Owner (Proprietor): <span className="font-medium">{BRAND.owner}</span>
+          </div>
+          <div className="mt-1 text-[hsl(var(--muted-foreground))]">
+            Developer: <span className="font-medium">{BRAND.developer}</span>
+          </div>
         </div>
       </div>
     </footer>

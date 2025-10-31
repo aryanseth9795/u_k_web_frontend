@@ -1,12 +1,12 @@
 export const BRAND = {
-  siteUrl: "https://uk-cosmetic.example.com", // change to your domain
-  appUrl: "https://play.google.com/store/apps/details?id=uk.cosmetic", // or your app link
-  phone: "+91 00000 00000",
-  name: "UK Cosmetic",
+  siteUrl: "https://ukcosmetics.aryanseth.in/store/", 
+  appUrl: "https://play.google.com/store/apps/details?id=uk.cosmetic", 
+  phone: "+91 9696174586",
+  name: "UK Cosmetics & Gift Center",
   owner: "Ujjwal Seth",
   developer: "Aryan Seth",
   address:
-    "UK cosmetics and Gift Center, Shakarmandi, Near Mohammad Hasan, Petrol Pump ke samne, Jaunpur 222001",
+    "Mohd Hasan pg College ke aage shahganj road, Sukhipur Shakarmandi, shiv shanti petrol pump ke samne,Jaunpur 222001",
   categories: [
     { name: "Skincare", slug: "skincare" },
     { name: "Makeup", slug: "makeup" },
