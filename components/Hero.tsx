@@ -7,8 +7,8 @@ import { Badge } from "./ui/badge";
 import { BRAND } from "@/lib/brand";
 import { toast } from "react-toastify";
 
-const BLANK =
-  "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTIwMCcgaGVpZ2h0PSc2NzUnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHJlY3Qgd2lkdGg9JzEyMDAnIGhlaWdodD0nNjc1JyByeD0nMjQnIGZpbGw9JyNmZmYnLz48L3N2Zz4=";
+// const BLANK =
+//   "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTIwMCcgaGVpZ2h0PSc2NzUnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHJlY3Qgd2lkdGg9JzEyMDAnIGhlaWdodD0nNjc1JyByeD0nMjQnIGZpbGw9JyNmZmYnLz48L3N2Zz4=";
 
 export default function Hero() {
   return (
@@ -69,11 +69,11 @@ export default function Hero() {
         >
           <div className="relative rounded-2xl border border-[hsl(var(--border))] p-2 shadow-sm">
             <Image
-              src={BLANK}
+              src={"/uk_landing.png"}
               alt="Premium cosmetics shelf visual"
               width={1200}
               height={675}
-              className="aspect-video w-full rounded-xl object-cover"
+              className="aspect-video w-full rounded-xl object-contain"
               priority
             />
             <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-tr from-[hsl(var(--primary))]/30 to-transparent" />

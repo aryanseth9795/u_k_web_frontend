@@ -1,3 +1,4 @@
+'use client";'
 import { Section } from "./shared/Section";
 import { SectionHeading } from "./shared/SectionHeading";
 import { BRAND } from "@/lib/brand";
