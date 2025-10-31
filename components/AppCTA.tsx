@@ -11,7 +11,9 @@ export default function AppCTA() {
       <div className="rounded-2xl bg-gradient-to-r from-[hsl(var(--accent))] to-[hsl(var(--primary))] p-6 text-[hsl(var(--accent-foreground))] sm:p-10">
         <div className="grid items-center gap-4 sm:grid-cols-2">
           <div>
-            <h3 className="text-2xl font-semibold sm:text-3xl">Get the UK Cosmetic App</h3>
+            <h3 className="text-2xl font-semibold sm:text-3xl">
+              Get the UK Cosmetic App
+            </h3>
             <p className="mt-1 opacity-90">
               Order faster, track offers, and browse gift hampers on the go.
             </p>
@@ -19,7 +21,8 @@ export default function AppCTA() {
           <div className="flex flex-wrap justify-start gap-3 sm:justify-end">
             <Button
               size="lg"
-              className="bg-white text-[hsl(var(--foreground))] hover:opacity-95"
+              // className="bg-white text-[hsl(var(--foreground))] hover:opacity-95"
+              className="bg-white text-[hsl(var(--foreground))] dark:bg-[hsl(var(--accent))] dark:text-[hsl(var(--accent-foreground))] hover:opacity-95"
               onClick={() => {
                 navigator.clipboard?.writeText(BRAND.appUrl).catch(() => {});
                 toast.success("Store app link copied! Opening download page…");
